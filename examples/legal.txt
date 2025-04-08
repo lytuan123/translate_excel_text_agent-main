@@ -1,0 +1,69 @@
+CONFIDENTIALITY AND NON-DISCLOSURE AGREEMENT
+
+THIS CONFIDENTIALITY AND NON-DISCLOSURE AGREEMENT (the "Agreement") is made and entered into as of [DATE] (the "Effective Date"), by and between [PARTY A], a corporation organized under the laws of [JURISDICTION], with its principal place of business at [ADDRESS] ("Disclosing Party"), and [PARTY B], a corporation organized under the laws of [JURISDICTION], with its principal place of business at [ADDRESS] ("Receiving Party").
+
+WHEREAS, the Disclosing Party possesses certain proprietary and confidential information, including but not limited to business plans, financial information, marketing strategies, customer lists, technical specifications, trade secrets, and other proprietary information (collectively, the "Confidential Information");
+
+WHEREAS, the Receiving Party desires to receive and the Disclosing Party is willing to disclose certain Confidential Information to the Receiving Party for the purpose of [PURPOSE OF DISCLOSURE] (the "Purpose");
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties hereto agree as follows:
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+
+1.1. "Confidential Information" means any and all non-public information, technical data, or know-how, including, but not limited to, research, product plans, products, services, customers, customer lists, markets, software, developments, inventions, processes, formulas, technology, designs, drawings, engineering, hardware configuration information, marketing, finances, or other business information disclosed by the Disclosing Party either directly or indirectly in writing, orally, or by drawings or inspection of parts or equipment.
+
+1.2. Confidential Information shall not include information that:
+(a) was in the public domain at the time it was disclosed or has become in the public domain through no fault of the Receiving Party;
+(b) was known to the Receiving Party, without restriction, at the time of disclosure, as demonstrated by files in existence at the time of disclosure;
+(c) is lawfully disclosed to the Receiving Party by a third party without restriction on disclosure;
+(d) is independently developed by the Receiving Party without use of the Disclosing Party's Confidential Information, as demonstrated by written records; or
+(e) is required by law to be disclosed by the Receiving Party, provided that the Receiving Party gives the Disclosing Party prompt written notice of such requirement prior to such disclosure and assistance in obtaining an order protecting the information from public disclosure.
+
+2. NON-DISCLOSURE AND NON-USE OBLIGATIONS
+
+2.1. The Receiving Party shall use the Confidential Information only for the Purpose.
+
+2.2. The Receiving Party agrees not to disclose any Confidential Information to third parties or to its employees, except to those employees who are required to have the information in order to evaluate or engage in discussions concerning the Purpose.
+
+2.3. The Receiving Party shall take reasonable measures to protect the secrecy of and avoid disclosure and unauthorized use of the Confidential Information. Without limiting the foregoing, the Receiving Party shall take at least those measures that it takes to protect its own most highly confidential information and shall ensure that its employees who have access to Confidential Information have signed a non-disclosure agreement in content at least as protective as the provisions hereof, prior to any disclosure of Confidential Information to such employees.
+
+2.4. The Receiving Party shall reproduce the Disclosing Party's proprietary rights notices on any such approved copies, in the same manner in which such notices were set forth in or on the original.
+
+2.5. The Receiving Party shall immediately notify the Disclosing Party in the event of any unauthorized use or disclosure of the Confidential Information.
+
+3. TERM AND TERMINATION
+
+3.1. This Agreement shall commence on the Effective Date and shall remain in effect for a period of [TERM] years thereafter.
+
+3.2. Notwithstanding the foregoing, the Receiving Party's duty to hold in confidence Confidential Information that was disclosed during the term shall remain in effect indefinitely, or until one of the exceptions in Section 1.2 applies.
+
+4. REMEDIES
+
+4.1. The Receiving Party acknowledges that unauthorized disclosure or use of Confidential Information could cause irreparable harm and significant injury to the Disclosing Party that may be difficult to ascertain. Accordingly, the Receiving Party agrees that the Disclosing Party shall have the right to seek and obtain immediate injunctive relief to enforce obligations under this Agreement in addition to any other rights and remedies it may have.
+
+5. NO WARRANTY
+
+5.1. ALL CONFIDENTIAL INFORMATION IS PROVIDED "AS IS". THE DISCLOSING PARTY MAKES NO WARRANTIES, EXPRESS, IMPLIED OR OTHERWISE, REGARDING ITS ACCURACY, COMPLETENESS OR PERFORMANCE.
+
+6. RETURN OF MATERIALS
+
+6.1. All documents and other tangible objects containing or representing Confidential Information which have been disclosed by the Disclosing Party to the Receiving Party, and all copies thereof which are in the possession of the Receiving Party, shall be and remain the property of the Disclosing Party and shall be promptly returned to the Disclosing Party or destroyed upon the Disclosing Party's written request.
+
+7. MISCELLANEOUS
+
+7.1. This Agreement shall not be construed as creating, conveying, transferring, granting or conferring upon the Receiving Party any rights, license or authority in or to the information exchanged, except the limited right to use Confidential Information specified in Section 2.1.
+
+7.2. This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous oral or written agreements concerning such subject matter.
+
+7.3. This Agreement may not be amended except by a written instrument signed by both parties.
+
+7.4. This Agreement shall be governed by and construed in accordance with the laws of [JURISDICTION] without regard to the conflicts of law provisions thereof.
+
+7.5. In the event that any of the provisions of this Agreement shall be held by a court or other tribunal of competent jurisdiction to be unenforceable, the remaining portions hereof shall remain in full force and effect.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+DISCLOSING PARTY:                                                     RECEIVING PARTY:
+
+_______________________________                      _______________________________
+[NAME AND TITLE]                                                      [NAME AND TITLE] 

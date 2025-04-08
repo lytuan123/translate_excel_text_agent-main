@@ -1,0 +1,14 @@
+Chemical bond=Liên kết hóa học
+Covalent bond=Liên kết cộng hóa trị
+Ionic bond=Liên kết ion
+Atomic number=Số hiệu nguyên tử
+Molecule=Phân tử
+Electron configuration=Cấu hình electron
+Acid-base reaction=Phản ứng axit-bazơ
+Oxidation=Sự oxi hóa
+Reduction=Sự khử
+Solvent=Dung môi
+Surface tension=Độ căng bề mặt
+Boiling point=Điểm sôi
+Polar molecule=Phân tử phân cực
+Hydrogen bond=Liên kết hydro

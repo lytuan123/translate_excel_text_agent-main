@@ -1,0 +1,129 @@
+CLINICAL CASE REPORT: MANAGEMENT OF TYPE 2 DIABETES MELLITUS WITH COMORBID HYPERTENSION
+
+PATIENT INFORMATION:
+Patient ID: [REDACTED]
+Age: 58 years
+Sex: Female
+Ethnicity: Asian
+Height: 162 cm
+Weight: 78 kg
+BMI: 29.7 kg/m² (Overweight)
+
+CHIEF COMPLAINT:
+Patient presents with fatigue, polyuria, polydipsia, and occasional blurred vision for the past 3 months. Additionally reports headaches and dizziness.
+
+MEDICAL HISTORY:
+- Diagnosed with Type 2 Diabetes Mellitus 5 years ago
+- Hypertension for 7 years
+- Hyperlipidemia
+- Family history: Father with Type 2 DM, Mother with hypertension
+- No known drug allergies
+- Non-smoker
+- Alcohol consumption: Occasional (1-2 drinks per week)
+
+CURRENT MEDICATIONS:
+- Metformin 1000 mg BID
+- Lisinopril 10 mg QD
+- Atorvastatin 20 mg QD
+- Aspirin 81 mg QD
+
+PHYSICAL EXAMINATION:
+Vital Signs:
+- Blood Pressure: 158/92 mmHg (seated, right arm)
+- Heart Rate: 84 bpm (regular)
+- Respiratory Rate: 16 breaths/min
+- Temperature: 36.7°C
+- SpO2: 98% on room air
+
+General: Patient appears well-nourished but fatigued
+HEENT: Normal, no retinopathy observed on fundoscopic examination
+Cardiovascular: Regular rate and rhythm, no murmurs, gallops, or rubs
+Respiratory: Clear to auscultation bilaterally
+Abdominal: Soft, non-tender, no organomegaly
+Extremities: No edema, pulses intact, no ulcerations
+Neurological: Alert and oriented, intact sensations in extremities
+
+LABORATORY FINDINGS:
+- Fasting Plasma Glucose: 9.8 mmol/L (176 mg/dL)
+- HbA1c: 8.4% (68 mmol/mol)
+- Total Cholesterol: 5.2 mmol/L (201 mg/dL)
+- LDL: 3.1 mmol/L (120 mg/dL)
+- HDL: 1.1 mmol/L (42 mg/dL)
+- Triglycerides: 2.3 mmol/L (204 mg/dL)
+- Serum Creatinine: 79 μmol/L (0.9 mg/dL)
+- eGFR: 78 mL/min/1.73m²
+- Urine Albumin-to-Creatinine Ratio: 45 mg/g (microalbuminuria)
+- Urine Analysis: No glycosuria, no ketonuria
+- Liver Function Tests: Within normal limits
+- Electrolytes: Within normal limits
+
+ASSESSMENT:
+1. Type 2 Diabetes Mellitus, poorly controlled (HbA1c 8.4%)
+2. Hypertension, uncontrolled (BP 158/92 mmHg)
+3. Hyperlipidemia
+4. Early Diabetic Nephropathy (microalbuminuria)
+5. Overweight (BMI 29.7 kg/m²)
+
+TREATMENT PLAN:
+
+1. Diabetes Management:
+   - Adjust Metformin to 1000 mg TID
+   - Add SGLT-2 inhibitor: Empagliflozin 10 mg QD
+   - Consider GLP-1 receptor agonist if glycemic targets not achieved within 3 months
+   - Blood glucose self-monitoring: twice daily (fasting and 2 hours post-prandial)
+   - HbA1c target: <7.0%
+
+2. Hypertension Management:
+   - Increase Lisinopril to 20 mg QD
+   - Add Amlodipine 5 mg QD
+   - Home blood pressure monitoring: twice daily
+   - BP target: <130/80 mmHg
+
+3. Hyperlipidemia Management:
+   - Continue Atorvastatin 20 mg QD
+   - Target LDL: <2.6 mmol/L (100 mg/dL)
+
+4. Nephroprotection:
+   - Continue ACE inhibitor (Lisinopril)
+   - Monitor renal function and UACR every 3 months
+
+5. Lifestyle Modifications:
+   - Dietary recommendations:
+     * Caloric restriction (1500 kcal/day)
+     * Low sodium diet (<2.3 g/day)
+     * Reduced carbohydrate intake (45-50% of total calories)
+     * Increase dietary fiber (25-30 g/day)
+   - Physical activity:
+     * Moderate-intensity aerobic exercise for 150 minutes per week
+     * Resistance training twice weekly
+   - Weight loss goal: 5-7% of body weight over 6 months (4-5 kg)
+   - Complete smoking cessation
+   - Limit alcohol consumption to ≤1 drink per day
+
+6. Patient Education:
+   - Diabetes self-management education
+   - Proper foot care
+   - Recognition of hypoglycemia symptoms and management
+   - Importance of medication adherence
+
+7. Preventive Care:
+   - Annual dilated eye examination
+   - Comprehensive foot examination every 6 months
+   - Annual influenza vaccination
+   - Pneumococcal vaccination as per age-appropriate guidelines
+
+FOLLOW-UP:
+- Return to clinic in 4 weeks for assessment of response to therapy
+- Laboratory tests (FPG, electrolytes, renal function) in 2 weeks
+- HbA1c reassessment in 3 months
+
+PROGNOSIS:
+With adherence to the treatment plan, including medication adjustments, lifestyle modifications, and regular follow-up, the patient has a good prognosis for improved glycemic control, blood pressure management, and prevention of diabetes-related complications.
+
+DISCUSSION:
+This case demonstrates the complexity of managing Type 2 Diabetes Mellitus with comorbid hypertension. The patient presents with suboptimal control of both conditions despite current therapy, necessitating a multifaceted approach. The addition of an SGLT-2 inhibitor provides both glycemic control and potential cardiorenal protection, which is particularly important given the patient's early diabetic nephropathy. The treatment plan aligns with current clinical guidelines that recommend a patient-centered approach with consideration of comorbidities when selecting antihyperglycemic agents. Simultaneous management of hypertension is crucial, as blood pressure control significantly reduces the risk of both macro- and microvascular complications in patients with diabetes. Regular monitoring and follow-up will allow for timely adjustments to therapy to achieve target goals and prevent disease progression.
+
+Dr. [Physician Name], MD
+Endocrinology and Metabolism
+[Hospital/Clinic Name]
+Date: [Current Date] 
