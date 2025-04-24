@@ -38,6 +38,31 @@ from src.translator import (
 # Import PDF processor
 from src.translator.pdf_processor import process_pdf
 
+# Import the new OCR processor
+from app.ocr_processor import process_pdf_ocr
+
+# --- Constants for UI --- 
+
+# Tesseract languages for OCR Dropdown
+# Format: {'name': Display Name, 'code': Tesseract Code}
+# Based on script.js and common languages
+OCR_LANGUAGES = [
+    {'name': "English", 'code': "eng"},
+    {'name': "Vietnamese", 'code': "vie"},
+    {'name': "French", 'code': "fra"},
+    {'name': "German", 'code': "deu"},
+    {'name': "Spanish", 'code': "spa"},
+    {'name': "Portuguese", 'code': "por"},
+    {'name': "Chinese - Simplified", 'code': "chi_sim"},
+    {'name': "Chinese - Traditional", 'code': "chi_tra"},
+    {'name': "Japanese", 'code': "jpn"},
+    {'name': "Korean", 'code': "kor"},
+    # Add more from Tesseract documentation if needed, e.g.:
+    # {'name': "Arabic", 'code': "ara"},
+    # {'name': "Russian", 'code': "rus"},
+    # {'name': "Italian", 'code': "ita"},
+]
+
 
 # File extraction utilities
 def extract_file_content(file_path: str) -> str:
@@ -415,6 +440,70 @@ def switch_languages(
         )
 
 
+# --- New Handler for PDF OCR --- 
+def handle_pdf_ocr_click(pdf_file, lang_name):
+    """Handles the button click event for PDF OCR processing."""
+    if not pdf_file:
+        return (
+            gr.update(value="", placeholder="Kết quả OCR sẽ xuất hiện ở đây..."), # Clear output
+            gr.update(value="Chưa tải file PDF lên."), # Status
+            gr.update(value="Lỗi: Vui lòng tải lên một tệp PDF trước.", visible=True) # Error visible
+        )
+
+    # Find the language code from the display name
+    lang_code = 'eng' # Default
+    for lang in OCR_LANGUAGES:
+        if lang['name'] == lang_name:
+            lang_code = lang['code']
+            break
+
+    pdf_file_path = pdf_file # Gradio passes the temp file path directly when type="filepath"
+    if not pdf_file_path or not os.path.exists(pdf_file_path):
+         return (
+            gr.update(value=""),
+            gr.update(value="Lỗi đường dẫn file."),
+            gr.update(value=f"Lỗi: Không tìm thấy tệp PDF tại đường dẫn: {pdf_file_path}", visible=True)
+        )
+
+    print(f"Starting OCR process for: {pdf_file_path} with language: {lang_code} ({lang_name})")
+
+    # Indicate processing start
+    yield (
+        gr.update(value="", placeholder="Đang xử lý OCR..."),
+        gr.update(value="Đang xử lý..."),
+        gr.update(value=None, visible=False) # Hide previous error
+    )
+
+    # Call the backend OCR processor
+    extracted_text, error_message = process_pdf_ocr(pdf_file_path, lang_code)
+
+    # Prepare updates for the UI based on the result
+    output_update = gr.update(value=extracted_text)
+    status_update = gr.update(value="Hoàn thành.")
+    error_update = gr.update(value=None, visible=False)
+
+    if error_message:
+        print(f"OCR Error: {error_message}")
+        status_update = gr.update(value="Hoàn thành với lỗi.")
+        error_update = gr.update(value=f"Lỗi OCR: {error_message}", visible=True)
+        if not extracted_text: # If error was fatal and no text extracted
+             output_update = gr.update(value="", placeholder="Xử lý OCR thất bại. Vui lòng kiểm tra lỗi.")
+
+    yield output_update, status_update, error_update
+
+
+# --- New Handler to send OCR text to Translation Tab --- 
+def send_ocr_to_translation(ocr_text):
+    """Updates the main translation input with the OCR text."""
+    if ocr_text:
+        # Update main text area and switch to the text translation tab
+        # Note: Switching tabs programmatically requires JS or more complex Gradio setup.
+        # We will just update the text area for now.
+        print("Sending OCR text to main translation input.")
+        return gr.update(value=ocr_text)
+    return gr.update() # No change if no text
+
+
 # UI definitions
 TITLE = """
     <div style="display: inline-flex;">
@@ -636,6 +725,7 @@ def create_ui():
                             label="Source Text",
                             value="If one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.",
                             lines=12,
+                            elem_id="main_source_text"
                         )
                         
                         upload_btn = gr.UploadButton(
@@ -674,6 +764,56 @@ def create_ui():
                             export = gr.DownloadButton(visible=False)
                             clear_text = gr.ClearButton([source_text, output_init, output_reflect, output_final])
                             cancel_text = gr.Button(value="Cancel", visible=False)
+                    
+                    # --- New PDF OCR Tab ---
+                    with gr.TabItem("PDF OCR"):
+                        gr.Markdown("## Trích xuất Văn bản từ PDF bằng OCR")
+                        gr.Markdown("Tải lên tệp PDF, chọn ngôn ngữ trong tài liệu, sau đó nhấn nút để trích xuất văn bản.")
+                        with gr.Row():
+                            with gr.Column(scale=2):
+                                pdf_ocr_upload = gr.File(
+                                    label="Tải lên PDF để OCR",
+                                    file_types=['.pdf'],
+                                    type="filepath", # Pass file path to backend
+                                    elem_id="pdf_ocr_upload"
+                                )
+                                pdf_ocr_language = gr.Dropdown(
+                                    label="Ngôn ngữ trong PDF (OCR)",
+                                    choices=[lang['name'] for lang in OCR_LANGUAGES],
+                                    value="English", # Default to English
+                                    elem_id="pdf_ocr_language"
+                                )
+                                pdf_ocr_button = gr.Button(
+                                    "Trích xuất Văn bản từ PDF",
+                                    variant="primary",
+                                    elem_id="pdf_ocr_button"
+                                )
+                                pdf_ocr_status = gr.Textbox( # For status/loading messages
+                                    label="Trạng thái OCR",
+                                    interactive=False,
+                                    placeholder="Sẵn sàng...",
+                                    elem_id="pdf_ocr_status"
+                                 )
+                                pdf_ocr_error = gr.Textbox( # For error messages
+                                    label="Thông báo lỗi OCR",
+                                    visible=False,
+                                    interactive=False,
+                                    elem_id="pdf_ocr_error"
+                                 )
+                            with gr.Column(scale=3):
+                                pdf_ocr_output = gr.TextArea(
+                                    label="Văn bản Trích xuất (từ OCR)",
+                                    lines=20, # Adjust height as needed
+                                    interactive=False,
+                                    placeholder="Kết quả OCR sẽ xuất hiện ở đây...",
+                                    elem_id="pdf_ocr_output",
+                                    show_copy_button=True
+                                )
+                                # Add the send button
+                                pdf_ocr_send_button = gr.Button(
+                                    "Gửi tới ô Dịch",
+                                    elem_id="pdf_ocr_send_button"
+                                )
                     
                     # PDF translation tab
                     with gr.TabItem("Dịch PDF"):
@@ -838,6 +978,22 @@ def create_ui():
             outputs=[cancel_text]
         )
         
+        # --- PDF OCR Event Handlers --- 
+        pdf_ocr_button.click(
+            fn=handle_pdf_ocr_click,
+            inputs=[pdf_ocr_upload, pdf_ocr_language],
+            outputs=[pdf_ocr_output, pdf_ocr_status, pdf_ocr_error],
+            show_progress="full"
+        )
+
+        # Connect the send button
+        pdf_ocr_send_button.click(
+            fn=send_ocr_to_translation,
+            inputs=[pdf_ocr_output],
+            outputs=[source_text] # Target the main source text input
+        )
+        # --------------------------
+
     return demo
 
 
