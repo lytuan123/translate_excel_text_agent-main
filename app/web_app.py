@@ -383,6 +383,7 @@ def update_model_selection(endpoint: str) -> Tuple[gr.update, gr.update]:
     endpoint_model_map = {
         "Groq": "llama3-70b-8192",
         "OpenAI": "gpt-4o",
+        "Gemini": "gemini-2.5-flash-preview-04-17",
         "TogetherAI": "Qwen/Qwen2-72B-Instruct", 
         "Ollama": "llama3",
         "CUSTOM": "",
@@ -588,7 +589,7 @@ def create_ui():
                 # Primary model configuration
                 endpoint = gr.Dropdown(
                     label="Translation Service",
-                    choices=["OpenAI", "Groq", "TogetherAI", "Ollama", "CUSTOM"],
+                    choices=["OpenAI", "Groq", "Gemini", "TogetherAI", "Ollama", "CUSTOM"],
                     value="OpenAI",
                 )
                 
@@ -616,7 +617,7 @@ def create_ui():
                 with gr.Column(visible=False) as second_endpoint_config:
                     endpoint2 = gr.Dropdown(
                         label="Secondary Service",
-                        choices=["OpenAI", "Groq", "TogetherAI", "Ollama", "CUSTOM"],
+                        choices=["OpenAI", "Groq", "Gemini", "TogetherAI", "Ollama", "CUSTOM"],
                         value="OpenAI",
                     )
                     
@@ -1006,5 +1007,6 @@ if __name__ == "__main__":
     demo.queue(api_open=False).launch(
         share=True,
         show_api=False,
-        server_name="0.0.0.0"
+        debug=True,
+        server_name="127.0.0.1"
     )

@@ -1,22 +1,20 @@
 @echo off
 echo Starting Advanced Translation Suite...
 
-:: Activate virtual environment
-call myenv\Scripts\activate
+:: Chuyển sang ổ D:
+D:
 
-:: Set environment variables
-set PYTHONPATH=%PYTHONPATH%;%CD%
+:: Di chuyển đến thư mục dự án
+cd "D:\Github resporitories\translate_excel_text_agent-main1\translate_excel_text_agent-main"
 
-:: Run the application
-python app/web_app.py
+:: Chạy server ở cửa sổ mới, không block
+start cmd /k "call myenv\Scripts\activate && set PYTHONPATH=%PYTHONPATH%;%CD% && python run.py web"
 
-:: Wait for a few seconds to ensure the server is up
+:: Đợi 5 giây
 timeout /t 5 /nobreak >nul
 
-:: Read the Gradio URL from the file
-set /p GRADIO_URL=<gradio_url.txt
+:: Mở trang web
+start http://127.0.0.1:7860/
 
-:: Open the Gradio link in the default web browser
-start %GRADIO_URL%
 
 pause

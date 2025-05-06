@@ -102,6 +102,7 @@ def main():
         if not model:
             endpoint_model_map = {
                 "Groq": "llama3-70b-8192",
+                "Gemini": "gemini-2.5-flash-preview-04-17",
                 "OpenAI": "gpt-4o",
                 "TogetherAI": "Qwen/Qwen2-72B-Instruct", 
                 "Ollama": "llama3",
@@ -164,6 +165,7 @@ def main():
             endpoint_model_map = {
                 "Groq": "llama3-70b-8192",
                 "OpenAI": "gpt-4o",
+                "Gemini": "gemini-2.5-flash-preview-04-17",
                 "TogetherAI": "Qwen/Qwen2-72B-Instruct", 
                 "Ollama": "llama3",
                 "CUSTOM": "",

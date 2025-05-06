@@ -1,0 +1,16 @@
+Here is the improved Vietnamese translation:
+
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:127826
+Trước khi chúng ta bắt đầu, tôi muốn chia sẻ một số mẹo với các bạn
+về cách trở thành một nhà phát triển ứng dụng thành công
+với Replit agent.
+Đầu tiên, hãy đảm bảo chính xác.
+Đảm bảo cung cấp cho Replit agent
+một nhiệm vụ mỗi lần.
+Nếu bạn có một nhiệm vụ phức tạp trong tâm trí,
+chia nhỏ nó thành các phần.
+Nếu không, bạn sẽ sớm gặp phải vấn đề rằng
+đặt nhiều nhiệm vụ phức tạp cùng lúc
+có thể thực sự là một thách thức
+cho các công cụ lập trình hiện nay.

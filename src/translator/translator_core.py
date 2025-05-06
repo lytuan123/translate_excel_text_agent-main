@@ -55,6 +55,10 @@ TRANSLATION_STYLES = {
 
     "Educational": "Dịch văn bản giáo dục theo phong cách rõ ràng, dễ hiểu, và mang tính sư phạm.  Sử dụng ngôn ngữ đơn giản, mạch lạc, và dễ tiếp thu.  Chú trọng đến việc giải thích các khái niệm, thuật ngữ một cách chi tiết và dễ hiểu.  Bản dịch cần hỗ trợ người học tiếp thu kiến thức một cách hiệu quả và phù hợp với mục tiêu giáo dục.",
 
+    "PharmaceuticalTechnology": "Dịch văn bản công nghệ dược phẩm với độ chính xác cao về thuật ngữ kỹ thuật và quy trình sản xuất dược phẩm. Sử dụng ngôn ngữ chuyên ngành, rõ ràng, và tuân thủ các tiêu chuẩn GMP, GLP, và các hướng dẫn kỹ thuật liên quan. Bản dịch cần đảm bảo truyền tải chính xác các công nghệ, thiết bị, và quy trình sản xuất – kiểm định – bảo quản thuốc, phù hợp với môi trường nghiên cứu và sản xuất dược phẩm.",
+
+    "PharmaceuticalIndustry": "Dịch văn bản thuộc ngành công nghiệp dược với trọng tâm vào thông tin kinh doanh, sản xuất, phân phối và quản lý dược phẩm. Sử dụng ngôn ngữ chuyên nghiệp, chính xác và phù hợp với bối cảnh pháp lý – thương mại. Bản dịch cần phản ánh đúng các quy định, mô hình kinh doanh, chiến lược thị trường và các vấn đề liên quan đến quản lý chuỗi cung ứng và phát triển sản phẩm trong lĩnh vực dược phẩm.",
+
     "Creative": "Dịch văn bản sáng tạo với sự linh hoạt và tự do diễn đạt, nhưng vẫn đảm bảo truyền tải được ý tưởng cốt lõi và tinh thần của văn bản gốc.  Có thể sử dụng ngôn ngữ giàu hình ảnh, ẩn dụ, và các biện pháp tu từ để tăng tính sáng tạo và độc đáo cho bản dịch.  Phù hợp với các loại văn bản như thơ ca, lời bài hát, kịch bản, hoặc các tác phẩm nghệ thuật khác.  Bản dịch cần thể hiện được sự sáng tạo và mang đậm dấu ấn cá nhân của người dịch, đồng thời vẫn tôn trọng ý tưởng ban đầu của tác giả."
     }
 
@@ -144,7 +148,7 @@ def model_load(
     api_key: Optional[str] = None,
     base_url: Optional[str] = None,
     temperature: float = 0.3,
-    rpm: int = 60,
+    rpm: int = 360,
     json_mode: bool = False,
 ) -> Dict[str, Any]:
     """
@@ -186,6 +190,11 @@ def model_load(
                 client = openai.OpenAI(
                     api_key=api_key if api_key else os.getenv("GROQ_API_KEY"),
                     base_url="https://api.groq.com/openai/v1",
+                )
+            case "Gemini":
+                client = openai.OpenAI(
+                    api_key=api_key if api_key else os.getenv("GEMINI_API_KEY"),
+                    base_url="https://generativelanguage.googleapis.com/v1beta",
                 )
             case "TogetherAI":
                 client = openai.OpenAI(
